@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eeee8fd-a22e-4e64-a56e-ee0feeb14c09" name="Default Changelist" comment="Верстка для https://betongbi62.ru/">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590594844986</updated>
-      <workItem from="1590594846089" duration="1067000" />
+      <workItem from="1590594846089" duration="1351000" />
     </task>
     <task id="LOCAL-00001" summary="Верстка для https://betongbi62.ru/">
       <created>1590595417348</created>
@@ -58,7 +58,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590595910019</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Верстка для https://betongbi62.ru/">
+      <created>1590595929324</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590595929324</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Верстка для https://betongbi62.ru/">
+      <created>1590596017706</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590596017706</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,10 +83,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Верстка для https://betongbi62.ru/" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="871" y="249" key="Vcs.Push.Dialog.v2" timestamp="1590595449691">
+    <state x="871" y="249" key="Vcs.Push.Dialog.v2" timestamp="1590596030184">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="871" y="249" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1590595449691" />
+    <state x="871" y="249" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1590596030184" />
     <state x="1080" y="425" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1590594963570">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
