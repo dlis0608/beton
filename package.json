@@ -1,0 +1,30 @@
+{
+	"name": "myproject",
+	"version": "1.0.0",
+	"description": "My First Gulp Project",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "WebDesign Master",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "*",
+		"del": "^4.1.1",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-cache": "*",
+		"gulp-concat": "*",
+		"gulp-cssnano": "*",
+		"gulp-imagemin": "^5.0.3",
+		"gulp-rename": "*",
+		"gulp-sass": "*",
+		"gulp-uglifyjs": "*",
+		"imagemin-pngquant": "^7.0.0"
+	},
+	"dependencies": {
+		"jquery-datetimepicker": "^2.5.21",
+		"jquery.formstyler": "^1.7.5-repackage",
+		"reset-css": "^4.0.1"
+	}
+}

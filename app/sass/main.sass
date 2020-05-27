@@ -1,0 +1,982 @@
+@import "vars"
+*
+	box-sizing: border-box
+body
+	color: $text-color
+	font-family: Arial, Helvetica, sans-serif
+	line-height: 1.3
+.wrap
+	max-width: 1140px
+	width: 100%
+	margin: auto
+.header
+	&__top
+
+		padding-top: 20px
+		padding-bottom: 20px
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__logo
+		background: url(../img/logo.png)
+		width: 261px
+		height: 62px
+		display: block
+	&__contacts
+		display: flex
+		flex-direction: column
+	&__phone
+		font-family: $russo
+		font-size: 30px
+		color: #000000
+	&__time
+		color: $grey
+		font-size: 14px
+		text-align: center
+	&__mail
+		display: flex
+		flex-direction: column
+		p
+			color: $grey
+			font-size: 14px
+			text-align: center
+			margin-bottom: 5px
+		a
+			font-size: 20px
+			color: #000
+			text-align: center
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	&__adress
+		font-size: 14px
+		p:first-child
+			margin-bottom: 10px
+.topmenu
+	background: $red
+	&__list
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__sublist
+		display: none
+	&__item
+		position: relative
+		padding-top: 7px
+		padding-bottom: 7px
+		&:hover
+			.sub-menu
+				display: flex
+				position: absolute
+				width: 270px
+				top: 100%
+				left: 0
+				flex-direction: column
+				background: $hover-red
+				padding: 25px 35px
+				border-radius: 10px
+				box-shadow: 5px 5px 5px rgba(0,0,0,.39)
+		&.current-menu-item
+			a
+				border-radius: 10px
+				background: $active-red
+				border: 1px solid $border-red
+		&.menu-item-has-children >
+			a
+				padding-left: 40px
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					background: url(../img/dropdown.png)
+					width: 17px
+					height: 17px
+					left: 15px
+					top: 12px
+	&__link
+		display: block
+		border: 1px solid transparent
+		font-size: 16px
+		font-weight: 700
+		color: #fff
+		text-align: center
+		padding: 10px 15px
+		text-decoration: none
+		transition: .3s ease
+		position: relative
+		&:hover
+			border-radius: 10px
+			background: $hover-red
+			border: 1px solid $border-red
+	&__sublink
+		font-weight: 700
+		color: #ffffff
+		display: block
+		padding: 10px 0
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+.topbanner
+	background: url(../img/topbanner.png) top center no-repeat
+	padding-top: 60px
+	padding-bottom: 30px
+	h1
+		text-align: center
+		font-size: 45px
+		color: #000000
+		font-family: $russo
+		text-transform: uppercase
+		margin-bottom: 25px
+	&__info
+		width: 50%
+		margin-left: auto
+	&__p
+		color: $green-text
+		text-align: center
+		font-size: 26px
+		.red
+			font-size: 28px
+			font-weight: 700
+			color: $red-text
+		.bold
+			display: block
+			font-weight: 700
+.topbanner-table
+	display: flex
+	margin-bottom: 25px
+	&__col
+		width: 50%
+		&--right
+			.topbanner-table__th
+				box-shadow: 15px 10px 8px -3px rgba(50, 50, 50, 0.1) inset
+				border-radius: 0 10px 0 0
+			.topbanner-table__td
+				box-shadow: 15px 10px 8px -3px rgba(50, 50, 50, 0.1) inset
+				border-radius: 0 0 10px 0
+		&--left
+			.topbanner-table__th
+				border-radius: 10px 0 0 0
+			.topbanner-table__td
+				border-radius: 0 0 0 10px
+	&__th
+		background: linear-gradient(to bottom,  #9d3258 0%,#77263f 100%)
+		padding: 18px
+		font-family: $russo
+		font-size: 20px
+		color: #fff
+		text-transform: uppercase
+	&__td
+		background: $green
+		color: #fff
+		font-size: 18px
+		padding: 15px 18px
+		span
+			font-size: 28px
+.main
+	padding: 40px 0
+.description
+	font-size: 18px
+	line-height: 30px
+	margin-bottom: 40px
+	span
+		color: $red-text
+		font-weight: 700
+.assortment
+	background: url(../img/assort.png) top center no-repeat
+	background-size: cover
+	border-radius: 10px
+	color: #fff
+	padding: 35px
+	&__title
+		font-family: $russo
+		text-transform: uppercase
+		font-size: 20px
+		text-align: center
+		margin-bottom: 50px
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-around
+		flex-wrap: wrap
+		list-style-type: disc
+		li
+			margin-right: 20px
+			margin-left: 20px
+			margin-bottom: 40px
+			&:nth-child(n+5)
+				margin-bottom: 0
+
+.main-bg
+	background: url(../img/consult.png) top center no-repeat
+	padding-top: 40px
+.consult
+	display: flex
+	margin-bottom: 40px
+	justify-content: space-between
+
+	&__col
+		width: calc(50% - 15px)
+	&__title
+		font-family: $russo
+		font-size: 20px
+		text-transform: uppercase
+		color: $red-text
+		margin-bottom: 20px
+		text-align: center
+	p
+		margin-bottom: 20px
+	span
+		font-weight: 700
+.price-main
+	width: 750px
+	margin: auto
+	&__title
+		h2
+			color: $red-text
+			font-size: 35px
+			text-transform: uppercase
+			text-align: center
+			font-family: $russo
+			margin-bottom: 25px
+	&__anchors
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		a
+			background: $light-green
+			border-radius: 5px
+			color: #fff
+			text-align: center
+			padding: 10px 0
+			width: calc(100% / 3 - 30px)
+			margin-left: 15px
+			margin-right: 15px
+			margin-bottom: 30px
+			font-family: $russo
+			text-decoration: none
+			transition: .3s ease
+			&:hover
+				background: $green-hover
+	&__block
+		margin-bottom: 40px
+	&__h2
+		h3
+			color: $red-text
+			font-size: 20px
+			text-transform: uppercase
+			text-align: center
+			font-family: $russo
+			margin-bottom: 25px
+	&__actual
+		color: #165f65
+		font-family: $russo
+		text-align: center
+		margin-bottom: 25px
+	table
+		width: 100%
+		border-collapse: collapse
+		border-radius: 5px
+		overflow: hidden
+		table-layout: fixed
+		&.five-cols
+			table-layout: auto
+		th
+			background: $light-green
+			color: #fff
+			font-weight: 700
+			text-align: center
+			padding: 10px 0
+			font-size: 18px
+			border-right: 1px dashed $grey-border
+			transition: .3s ease
+			vertical-align: middle
+			&:last-child
+				border-right: none
+			&:hover
+				background: $green-hover
+		td
+			border: 1px dashed $grey-border
+			padding: 15px
+			font-size: 18px
+			&:nth-child(n+2)
+				text-align: center
+			a
+				color: $red-text
+				&:hover
+					text-decoration: none
+		tr:nth-child(2n)
+			td
+				background: #edf3f2
+	&__description
+		font-size: 13px
+		margin-top: 30px
+		opacity: .7
+		line-height: 1.54
+.order
+	margin-bottom: 30px
+	&__title
+		h2
+			color: $red-text
+			font-size: 35px
+			text-transform: uppercase
+			text-align: center
+			font-family: $russo
+			margin-bottom: 25px
+	&__subtitle
+		color: #165f65
+		font-family: $russo
+		text-align: center
+		margin-bottom: 25px
+	form
+		input
+			padding: 8px 10px
+			border: solid 1px #165f65
+			font-size: 14px
+			color: #535353
+			&[type="submit"]
+				border-radius: 5px
+				background-color: #9d2951
+				margin: 20px auto
+				display: block
+				font-family: $russo
+				font-size: 16px
+				color: #fff
+				cursor: pointer
+				border: none
+				padding: 12px 35px
+				transition: .3s ease
+				&:hover
+					background: $hover-red
+	&__flex
+		display: flex
+		flex-direction: column
+	&__line
+		display: flex
+		justify-content: center
+		> *
+			width: 166px
+			margin-left: 15px
+			margin-right: 15px
+		&--first
+			margin-bottom: 30px
+	&__adress
+		width: 270px
+	&__p
+		font-size: 11px
+		opacity: 0.8
+		text-align: center
+		&:first-of-type
+			margin-bottom: 5px
+.advantage
+	background: #f6f9f8
+	padding: 35px 0
+	&__title
+		h2
+			color: $red-text
+			font-size: 35px
+			text-transform: uppercase
+			text-align: center
+			font-family: $russo
+			margin-bottom: 25px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__block, .question
+		width: calc(100% / 3 - 40px)
+		margin-left: 20px
+		margin-right: 20px
+		margin-bottom: 20px
+		&:nth-child(n+4)
+			margin-bottom: 0
+	&__block
+		position: relative
+		padding-top: 120px
+		&:before
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			content: ''
+			width: 96px
+			height: 96px
+		&--shipment
+			&:before
+				background: url(../img/shipment.png)
+		&--park
+			&:before
+				background: url(../img/park.png)
+		&--specialist
+			&:before
+				background: url(../img/specialist.png)
+		&--delivery
+			&:before
+				background: url(../img/delivery.png)
+		&--lowcost
+			&:before
+				background: url(../img/lowcost.png)
+	&__block-title
+		font-size: 16px
+		color: $red-text
+		text-align: center
+		margin-bottom: 15px
+		text-transform: uppercase
+		font-family: $russo
+	&__text
+		li
+			position: relative
+			padding-left: 15px
+			margin-bottom: 10px
+			&:before
+				width: 4px
+				height: 4px
+				background: #4d897d
+				border-radius: 50%
+				content: ''
+				position: absolute
+				left: 0
+				top: 9px
+		&--center
+			text-align: center
+.question
+	form
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__form-line
+		display: flex
+		justify-content: space-between
+		margin-bottom: 15px
+	input[type="text"], input[type="tel"]
+		width: calc(50% - 10px)
+		border: solid 0.5px #91b4b7
+		background-color: #ffffff
+		font-size: 14px
+		color: #535353
+		padding: 7px
+	&__p
+		width: 202px
+		line-height: 1
+		text-align: center
+		font-size: 14px
+		margin: 0 auto 20px
+	input[type="submit"]
+		border-radius: 5px
+		background-color: #9d2951
+		margin: 0 auto 20px
+		display: block
+		font-family: $russo
+		font-size: 16px
+		color: #fff
+		cursor: pointer
+		border: none
+		padding: 12px 35px
+		transition: .3s ease
+		&:hover
+			background: $hover-red
+	&__confidence
+		font-size: 11px
+		opacity: 0.8
+		text-align: center
+.jq-selectbox
+	&__select
+		padding: 8px 10px
+		border: solid 1px #165f65
+		font-size: 14px
+		color: #535353
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			background: url(../img/select.jpg)
+			width: 35px
+			height: 34px
+			right: 0
+			top: 0
+			cursor: pointer
+	&__dropdown
+		width: 100%
+		border: solid 1px #165f65
+		border-top: none
+		li
+			padding: 8px 10px
+			background: #ffffff
+			cursor: pointer
+			&:hover
+				background: #165f65
+				color: #fff
+.footer
+	background: #283947
+	padding: 35px 0
+	color: #c5e0db
+	&__line
+		display: flex
+		align-items: flex-start
+		&:first-child
+			margin-bottom: 15px
+	&__logo
+		background: url(../img/footer-logo.png)
+		display: block
+		width: 144px
+		height: 45px
+		flex-shrink: 0
+		margin-right: 35px
+	&__contacts
+		display: flex
+		flex-direction: column
+		margin-right: 35px
+		a
+			display: inline-block
+			text-decoration: none
+			color: #c5e0db
+			&:hover
+				text-decoration: underline
+	&__phone
+		margin-bottom: 5px
+	&__email
+		font-size: 14px
+	&__copyright
+		flex-basis: 500px
+		font-size: 14px
+		letter-spacing: -.2px
+		line-height: 24px
+	&__policy
+		text-align: right
+		font-size: 12px
+		color: #c5e0db
+		flex-basis: 144px
+		flex-shrink: 0
+		margin-right: 35px
+		opacity: 0.5
+		transition: .3s ease
+		&:hover
+			text-decoration: none
+			opacity: 1
+	&__offer
+		flex-basis:  701px
+		flex-shrink: 0
+		font-size: 12px
+		opacity: 0.5
+.logostudia
+	background: url(../img/studio-logo.png) left bottom no-repeat
+	width: 200px
+	height: 50px
+	color: #c5e0db
+	opacity: 0.37
+	text-decoration: none
+	transition: .3s ease
+	font-size: 12px
+	padding-top: 5px
+	margin-left: auto
+	&:hover
+		opacity: 1
+.counter
+	margin-left: auto
+	text-align: left
+	opacity: 0.5
+	transition: .3s ease
+	flex-basis: 200px
+	flex-shrink: 0
+	&:hover
+		opacity: 1
+.slide
+	display: none
+@media screen and (max-width: 1140px)
+	.wrap
+		padding-left: 15px
+		padding-right: 15px
+	.header
+		&__logo
+			width: 200px
+			height: 48px
+			background-size: contain
+		&__phone
+			font-size: 24px
+		&__time
+			font-size: 11px
+	.topmenu
+		&__link
+			font-size: 14px
+			padding: 10px
+	.topbanner
+		h1
+			font-size: 38px
+		&__p
+			font-size: 22px
+	.topbanner-table
+		&__th
+			font-size: 16px
+		&__td
+			font-size: 15px
+			span
+				font-size: 23px
+	.assortment
+		padding: 30px 15px
+		&__title
+			margin-bottom: 30px
+		&__wrap
+			li
+				margin-left: 0
+				margin-right: 0
+				&:nth-child(n+5)
+					margin-right: 10px
+				&:last-child
+					margin-right: 0
+	.logostudia
+		position: absolute
+		top: 65px
+		right: 120px
+		padding-top: 0
+		z-index: 1
+	.footer
+		&__line
+			position: relative
+		&__copyright
+			flex-basis: auto
+		&__email
+			white-space: nowrap
+		&__offer
+			flex-basis: 430px
+	.counter
+		flex-basis: auto
+@media screen and (max-width: 970px)
+	.header
+		&__logo
+			width: 200px
+			height: 48px
+			background-size: contain
+			background-repeat: no-repeat
+		&__adress
+			display: none
+	.topmenu
+		&__link
+			font-size: 11px
+			padding: 5px
+		&__sublink
+			font-size: 12px
+			padding: 7px 0
+		&__item:hover
+			.sub-menu
+				padding: 10px
+				width: 200px
+	.topmenu__item.menu-item-has-children > a:before
+		top: 5px
+	.topbanner
+		h1
+			font-size: 30px
+		&__info
+			width: 65%
+	.assortment
+		padding: 30px
+		&__wrap
+			justify-content: flex-start
+			li
+				margin-right: 30px
+				margin-bottom: 20px
+				&:nth-child(n+5)
+					margin-right: 30px
+					margin-bottom: 20px
+	.price-main
+		width: 100%
+	.advantage
+		&__block, .question
+			width: 50%
+			margin-left: 0
+			margin-right: 0
+			padding-left: 15px
+			padding-right: 15px
+	.logostudia
+		position: absolute
+		top: auto
+		bottom: -120px
+		right: auto
+		left: 0
+		padding-top: 0
+		z-index: 1
+	.footer
+		height: 250px
+		padding: 20px 0
+		&__logo
+			margin-right: 76px
+		&__contacts
+			position: absolute
+			top: 65px
+			z-index: 1
+		&__copyright
+			flex-basis: auto
+		&__policy
+			position: absolute
+			top: 65px
+			left: 220px
+			width: 120px
+			text-align: left
+		&__offer
+			flex-basis: calc(100% - 220px)
+			margin-left: auto
+	.counter
+		position: absolute
+		top: 65px
+		right: 0
+@media screen and (max-width: 750px)
+	.header
+		&__top
+			position: fixed
+			width: 100%
+			background: #892c4d
+			z-index: 10
+		&__mail
+			display: none
+		&__time
+			display: none
+		&__logo
+			margin: auto
+			background: url(../img/logo-mobile.png)
+			width: 208px
+			height: 49px
+		&__phone
+			position: absolute
+			right: 15px
+			text-indent: -9999px
+			width: 50px
+			height: 50px
+			background: url(../img/phone-mobile.png)
+			top: 20px
+	.mobile-menu
+		position: absolute
+		left: 15px
+		width: 50px
+		height: 50px
+		background: url(../img/ham.png)
+		top: 20px
+	.topmenu
+		display: none
+	.topbanner
+		padding-top: 110px
+		&__info
+			width: 100%
+		h1
+			font-size: 26px
+			margin-bottom: 20px
+	.topbanner-table
+		margin-bottom: 15px
+		&__td span
+			font-size: 20px
+	.main
+		padding: 20px 0
+	.assortment
+		padding-left: 70px
+		padding-right: 70px
+		&__wrap
+			flex-direction: column
+			align-items: flex-start
+	.consult
+		flex-direction: column
+		&__col
+			width: 100%
+	.price-main
+		&__anchors
+			a
+				width: calc(50% - 20px)
+				padding-left: 5px
+				padding-right: 5px
+				margin-right: 10px
+				margin-left: 10px
+	.price-main
+		table
+			th
+				padding: 5px 0
+				font-size: 14px
+			td
+				padding: 5px
+				font-size: 14px
+	.order
+		&__line
+			flex-direction: column
+			> *
+				width: 200px
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 20px
+			&:first-child
+				margin-bottom: 0
+		form
+			input[type="submit"]
+				margin-top: 0
+	.advantage
+		&__block, .question
+			width: 100%
+			margin-bottom: 20px
+			&:nth-child(n+4)
+				margin-bottom: 20px
+	.footer
+		height: 340px
+		&__line
+			flex-wrap: wrap
+			justify-content: center
+		&__logo
+			width: 150px
+			flex-shrink: 0
+			margin-right: 30px
+			margin-bottom: 20px
+			background-repeat: no-repeat
+		&__contacts
+			position: static
+			width: 50%
+			flex-shrink: 0
+			margin-right: 0
+		&__copyright
+			text-align: center
+		&__policy
+			position: absolute
+			top: 65px
+			left: 50%
+			transform: translateX(-100px)
+			width: 200px
+			text-align: left
+		&__offer
+			flex-basis: 100%
+			margin-left: 0
+			text-align: center
+	.counter
+		position: absolute
+		top: 95px
+		right: 0
+	.logostudia
+		bottom: -160px
+		padding-top: 40px
+		background-position-y: top
+		background-position-x: center
+	.slideout-menu
+		position: fixed
+		top: 0
+		bottom: 0
+		width: 256px
+		min-height: 100vh
+		overflow-y: scroll
+		-webkit-overflow-scrolling: touch
+		z-index: 0
+		display: none
+		background: #892c4d
+		color: #fff
+		padding: 15px
+	.slideout-menu-left
+		left: 0
+	.slideout-panel
+		position: relative
+		z-index: 1
+		will-change: transform
+		background-color: #fff
+		 min-height: 100vh
+	.slideout-open,
+	.slideout-open body,
+	.slideout-open .slideout-panel
+		overflow: hidden
+	.slideout-open .slideout-menu
+		display: block
+	.panel:before
+		content: ''
+		display: block
+		background-color: rgba(0,0,0,0)
+		transition: background-color 0.5s ease-in-out
+	.panel-open:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		background-color: rgba(0,0,0,.5)
+		z-index: 99
+	.slide
+		&__catalog
+			margin-bottom: 30px
+		&__title
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-weight: 700
+			text-decoration: none
+			padding-bottom: 5px
+			border-bottom: 1px solid #fff
+		&__list
+			padding-top: 15px
+		&__item
+			margin-bottom: 10px
+		&__link
+			color: #fff
+			text-decoration: none
+			font-weight: 700
+			span
+				font-weight: 400
+@media screen and (max-width: 480px)
+	.header
+		&__logo
+			margin: auto
+			background: url(../img/logo-mobile.png)
+			width: 160px
+			height: 40px
+			background-size: contain
+			background-repeat: no-repeat
+		&__phone
+			width: 40px
+			height: 40px
+			background-size: cover
+		.mobile-menu
+			width: 40px
+			height: 40px
+			background-size: cover
+	.topbanner-table
+		&__th, &__td
+			padding: 10px 5px
+			font-size: 10px
+		&__td
+			font-size: 9px
+			span
+				font-size: 14px
+
+	.topbanner
+		background: url(../img/topbanner-mobile.png)
+		background-repeat: repeat-x
+		background-position-y: 80px
+		&__p
+			font-size: 18px
+			.red
+				font-size: 22px
+	.assortment
+		padding-left: 25px
+		padding-right: 25px
+	.price-main
+		&__anchors
+			flex-direction: column
+			a
+				margin-left: auto
+				margin-right: auto
+				width: 80%
+		table
+			th, td
+				font-size: 11px
+	.footer
+		height: 480px
+		&__logo
+			margin-right: auto
+			margin-left: auto
+		&__contacts
+			margin-right: auto
+			margin-left: auto
+			text-align: center
+			margin-bottom: 20px
+		&__copyright
+			text-align: center
+		&__policy
+			top: 95px
+			text-align: center
+		&__offer
+			flex-basis: 100%
+			margin-left: 0
+			text-align: center
+	.counter
+		position: absolute
+		top: 140px
+		right: 0
+	.logostudia
+		bottom: -200px
